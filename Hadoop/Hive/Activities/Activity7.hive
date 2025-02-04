@@ -1,0 +1,20 @@
+--Drop the old tables
+DROP TABLE employee;
+
+-- Create the employee table
+CREATE TABLE employee(id INT, name STRING, dept STRING, yoj INT, salary INT)
+ROW FORMAT DELIMITED FIELDS TERMINATED BY ','
+TBLPROPERTIES('skip.header.line.count'='1');
+
+-- Load the data into the table
+LOAD DATA LOCAL INPATH '/root/Activity7.csv' INTO TABLE employee;
+
+-- Export to HDFS
+INSERT OVERWRITE DIRECTORY '/user/appu/HiveOutput_7'
+ROW FORMAT DELIMITED FIELDS TERMINATED BY ','
+SELECT * FROM employee WHERE dept='IT';
+
+-- Export to local
+INSERT OVERWRITE LOCAL DIRECTORY '/root/HiveOutput_7'
+ROW FORMAT DELIMITED FIELDS TERMINATED BY ','
+SELECT * FROM employee WHERE yoj=2022;
