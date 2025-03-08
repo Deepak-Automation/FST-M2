@@ -1,0 +1,55 @@
+<persons>
+    <person id="1">
+        <firstname>James</firstname>
+        <middlename>Madison</middlename>
+        <lastname>Smith</lastname>
+        <dob_year>1980</dob_year>
+        <dob_month>1</dob_month>
+        <gender>M</gender>
+        <salary currency="Euro">10000</salary>
+        <addresses>
+            <address>
+                <street>123 ABC street</street>
+                <city>NewJersy</city>
+                <state>NJ</state>
+            </address>
+            <address>
+                <street>456 apple street</street>
+                <city>newark</city>
+                <state>DE</state>
+            </address>
+        </addresses>
+    </person>
+    <person id="2">
+        <firstname>Rose</firstname>
+        <middlename></middlename>
+        <lastname>Tyler</lastname>
+        <dob_year>1990</dob_year>
+        <dob_month>6</dob_month>
+        <gender>M</gender>
+        <salary currency="USD">10000</salary>
+        <addresses>
+            <address>
+                <street>4512 main st</street>
+                <city>new york</city>
+                <state>NY</state>
+            </address>
+        </addresses>
+    </person>
+    <person id="3">
+        <firstname>Lily</firstname>
+        <middlename></middlename>
+        <lastname>Pichu</lastname>
+        <dob_year>1989</dob_year>
+        <dob_month>11</dob_month>
+        <gender>F</gender>
+        <salary currency="USD">1000000</salary>
+        <addresses>
+            <address>
+                <street>12 Streamer st</street>
+                <city>Los Angeles</city>
+                <state>CA</state>
+            </address>
+        </addresses>
+    </person>
+</persons>
