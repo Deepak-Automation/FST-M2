@@ -1,0 +1,16 @@
+# set base image   --- to run node commands we need node installed as base. here we are gona run node on an alpine -18 linux env.
+FROM docker.io/node:18-alpine
+
+# Creating Working Directory 
+WORKDIR /usr/app
+
+#after 5 step we are inside /usr/app so we need to copy all our artifacts into container [ COPY << Host Path>> << destination path >> ]
+COPY ./ ./ 
+
+# ./ -> means current folder in our case  host location simpleweb & next ./ denotes destination in our case after we do WORKDIR /usr/app we are alredy inside app so doing a ./(current folder)
+
+# Download and install a dependancy - to insall npm ( app used is nodeJS app)
+RUN npm install
+
+# command to run upon the container Startup ( to run the NodeJS app)
+CMD ["npm","start"]
